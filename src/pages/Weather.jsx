@@ -173,9 +173,12 @@ const WeatherApp = () => {
 					onSubmit={(e) => {
 						formHandler.handleWeatherForm(e);
 						setWeatherInput();
-					}} onChange={(e)=>{
-						setSearchValue(e.target.value)
-					}}>
+					}}
+					 onChange={(e)=>{
+						formHandler.handleWeatherForm(e.target.value)
+						// setWeatherInput();
+					}}
+					>
 					<label htmlFor="searchWeather" className="py-2 text-capitalize ">
 						search city
 					</label>
